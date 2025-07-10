@@ -33,7 +33,6 @@ const CitySearch = () => {
     };
 
     const { favorites } = useFavorite();
-
     return (
         <>
             <Button
@@ -51,7 +50,7 @@ const CitySearch = () => {
                     value={query}
                     onValueChange={setQuery}
                 />
-                <CommandList className="overflow-y-auto max-h-[80vh] overscroll-contain">
+                <CommandList>
                     {query.length > 2 && !isLoading && (
                         <CommandEmpty>No Cities Found.</CommandEmpty>
                     )}
@@ -92,8 +91,9 @@ const CitySearch = () => {
                                         variant="ghost"
                                         size="sm"
                                         onClick={() => clearHistory.mutate()}
+                                        className="cursor-pointer"
                                     >
-                                        <XCircle />
+                                        <XCircle className="h-4 w-4" />
                                         Clear
                                     </Button>
                                 </div>
@@ -153,10 +153,8 @@ const CitySearch = () => {
                                     </CommandItem>
                                 )
                             })}
-
                         </CommandGroup>
                     )}
-
                 </CommandList>
             </CommandDialog>
         </>

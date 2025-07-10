@@ -22,8 +22,7 @@ const Header = () => {
 
             <div className="flex gap-4">
                 {/* search */}
-                <CitySearch />
-
+                <CitySearch />  
                 
                 <div 
                     onClick={() => setTheme(isDark ? "light" : "dark") }
