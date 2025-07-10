@@ -45,8 +45,6 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
             icon: Gauge,
             color: "text-purple-500"
         },
-
-
     ]
 
     return (
