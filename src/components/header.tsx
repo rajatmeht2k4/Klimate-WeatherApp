@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur py-2 supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex h-16 items-center justify-between px-12">
+        <nav className="container mx-auto flex h-16 items-center justify-between px-6 md:px-12">
             <Link to={"/"}>
                 <img 
                     src={isDark ? "/logo.png" : "/logo2.png"} 
@@ -37,7 +37,7 @@ const Header = () => {
                     )}
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
   )
 }
